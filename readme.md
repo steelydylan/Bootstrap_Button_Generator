@@ -1,8 +1,8 @@
 Bootstrap Button Generator
 ==========
 
-
-JavaScript Game Engine
+In this website, you can easily create your
+original Bootstrap buttons
 
 
 Descreption

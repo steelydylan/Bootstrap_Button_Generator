@@ -5,8 +5,7 @@ textarea{
 .wallpaper{
 	width:100%;
 	background-image:url(015-1.jpg);
-	height:65%;
-	text-align:center;
+	height:65%;	
 	padding: 40px 0;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
@@ -14,6 +13,7 @@ textarea{
 .wallpaper h1 {
     font-size: 60px;
     line-height:62px;
+    text-align:center;
     margin:50px;
   }
 .wallpaper p{
@@ -23,7 +23,12 @@ textarea{
 .wallpaper input{
     margin:10px;
 }
-
+.container-narrow{
+	width:60%;
+    margin: 0 auto;
+	padding-left:0px;
+	padding-right:0px;
+}
 @media (max-width:767px) { 
   body { 
   padding-left: 0px; 
@@ -38,9 +43,12 @@ textarea{
     line-height: 47px;
     margin:20px;
   }
+  .container-narrow{
+		width: 100%;
+		margin:0;
+		text-align:center;
+	}
  }
- 
-
 .btn-warning {
   color: #ffffff; 
   background-color: #ff9125;
@@ -59,6 +67,9 @@ textarea{
 	margin-right:5px;
 	opacity:0.5;
 	padding-top:10px;
+}
+#dl-btn{
+    margin-left:12px;
 }
 .bar{
   background-color:#F5F5F5;
