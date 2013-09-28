@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="Sat, 31 Aug 2002 17:35:42 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel ="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
+<link rel ="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css"/>
+<link rel ="stylesheet" href="./fontawesome/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="./bootstrap-modal/css/bootstrap-modal.css">
+<link rel ="stylesheet" href="generator.css"/>
+</head>
+<body>
+<!--modalWindow-->
+<div id="modalWindow" class="modal hide fade">  
+    <div class="modal-header">    
+	<a href="#" class="close" data-dismiss="modal">&times;</a>
+	 <h5>下のソースを選択して貼付けてください</h5> 
+	</div>   
+    <div class="modal-body">
+    <textarea id="cssarea"></textarea>
+    <a class="btn btn-warning btn-block" id="focus">エリア内全選択</a>
+    </div>
+</div>  
+<!--modalWindow-->
+<div class="wallpaper">
+<h1>Bootstrap Button Generator</h1>
+<p>下にボタンのクラス名、およびボタンの色を入力し</p>
+<p>ダウンロードしてください</p>
+<input type="text" id="btn-name" value="btn-warning" placeholder="btn-warning"/><input type="text" id="color" value="#ffa22c"placeholder="#ffa22c"><br/>
+<a id="dl-btn" class="btn btn-warning btn-large"><i class="icon-download-alt"></i>ボタン作成</a>
+</div>
+<div class="bar"></div>
+<script src="./bootstrap/js/jQuery.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+<script src="./bootstrap-modal/js/bootstrap-modal.js"></script>
+<script src="./generator.js"></script>
+</body>
+</html>
