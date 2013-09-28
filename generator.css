@@ -2,6 +2,9 @@ html,body { height:100%; }
 textarea{
    width:90%;
 }
+#wrap{
+overflow-x:hidden;
+}
 .wallpaper{
 	width:100%;
 	background-image:url(015-1.jpg);
@@ -29,6 +32,12 @@ textarea{
 	padding-left:0px;
 	padding-right:0px;
 }
+@media(max-width: 979px){
+    .container-narrow{
+		width: 85%;
+		margin: 0 auto;
+	}
+}
 @media (max-width:767px) { 
   body { 
   padding-left: 0px; 
@@ -41,13 +50,16 @@ textarea{
   .wallpaper h1 {
     font-size: 45px;
     line-height: 47px;
-    margin:20px;
+    margin:5px;
   }
   .container-narrow{
 		width: 100%;
 		margin:0;
 		text-align:center;
-	}
+  }
+  .bar .container-narrow{
+      text-align:left;
+  }
  }
 .btn-warning {
   color: #ffffff; 
