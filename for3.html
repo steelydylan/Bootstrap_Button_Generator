@@ -6,38 +6,42 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="Sat, 31 Aug 2002 17:35:42 GMT">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link rel ="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
-<link rel ="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css"/>
-<link rel ="stylesheet" href="./fontawesome/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="./bootstrap-modal/css/bootstrap-modal.css">
-<link rel ="stylesheet" href="generator.css"/>
+<link rel ="stylesheet" href="./bootstrap-3.0.0/dist/css/bootstrap.min.css"/>
+<link rel= "stylesheet" href="./fontawesome/css/font-awesome.min.css"/>
+<link rel ="stylesheet" href="generator2.css"/>
 </head>
 <body>
 <!--modalWindow-->
 <div id="wrap">
-<div id="modalWindow" class="modal hide fade">  
-    <div class="modal-header">    
-	<a href="#" class="close" data-dismiss="modal">&times;</a>
-	 <h5>下のソースを選択して貼付けてください</h5> 
-	</div>   
-    <div class="modal-body">
-    <textarea id="cssarea"></textarea>
-    <a class="btn btn-warning btn-block" id="focus">エリア内全選択</a>
-    </div>
-</div>  
+<div id="modalWindow" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">下のソースを選択して貼付けてください</h4>
+      </div>
+      <div class="modal-body">
+        <textarea id="cssarea"></textarea>        
+      </div>
+      <div class="modal-footer">
+          <a class="btn btn-warning btn-block" id="focus">エリア内全選択</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <!--modalWindow-->
 <div class="wallpaper">
-    <h1>Bootstrap Button Generator<small><br/>for Bootstrap2</small></h1>
+    <h1>Bootstrap Button Generator<small><br/>for Bootstrap3</small></h1>
     <div class="container-narrow">
-        <div class="row-fluid">
-            <div class="span8">
+        <div class="row">
+            <div class="col-sm-8">
                 <p>ボタンのクラス名、およびボタンの色を入力し</p>
                 <p>ダウンロードしてください</p>
             </div>
-            <div class="span4">
-                <input type="text" id="btn-name" value="btn-warning" placeholder="btn-warning"/><br/>
-                <input type="text" id="color" value="#ffa22c"placeholder="#ffa22c"><br/>
-                <a id="dl-btn" class="btn btn-warning btn-large"><i class="icon-download-alt"></i>ボタン作成</a>
+            <div class="col-sm-4">
+                <input type="text" id="btn-name" class="form-control col-md-1" value="btn-warning" placeholder="btn-warning"/><br/>
+                <input type="text" id="color" class="form-control col-md-1" value="#ffa22c" placeholder="#ffa22c"><br/>
+                <a id="dl-btn" class="btn btn-warning btn-lg"><i class="icon-download-alt"></i>ボタン作成</a>
             </div>
         </div>
     </div>
@@ -52,14 +56,12 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <a href="https://twitter.com/steelydylan" class="twitter-follow-button" data-show-count="false" data-lang="ja">@steelydylanさんをフォロー</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <br/><a href="for3.html"><small>for Bootstrap3</small></a>
+   <br/><a href="index.html"><small>for Bootstrap2</small></a> 
     </div>
 </div>
 </div>
-<script src="./bootstrap/js/jQuery.js"></script>
-<script src="./bootstrap/js/bootstrap.min.js"></script>
-<script src="./bootstrap-modal/js/bootstrap-modalmanager.js"></script>
-<script src="./bootstrap-modal/js/bootstrap-modal.js"></script>
-<script src="./generator.js"></script>
+<script src="./bootstrap-3.0.0/dist/js/jQuery.js"></script>
+<script src="./bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="./generator2.js"></script>
 </body>
 </html>
