@@ -1,34 +1,13 @@
 var from = "#ff9125";
 var to = "#ffab58";
-$("#dl-btn").click(function(){
-    var btnName = $("#btn-name").val();
-    var text = 
-    "."+ btnName + "{ \n" +
-    "color: #ffffff; \n" + 
-    "background-color: "+from+"; \n" +
-    "background-image: -moz-linear-gradient(top, "+to+","+ from + "); \n" +
-    "background-image: -ms-linear-gradient(top, "+to+","+ from + "); \n" +
-    "background-image: -webkit-gradient(linear, 0 0, 0 100%, from("+to+"), to("+from+")); \n" +
-    "background-image: -webkit-linear-gradient(top, "+to+","+ from + "); \n" +
-    "background-image: -o-linear-gradient(top, "+to+","+ from + "); \n" +
-    "background-image: linear-gradient(top, "+to+","+ from + "); \n" +
-    "filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='"+to+"', endColorstr='"+from+"', GradientType=0); \n" +
-    "} \n" +
-    ".btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled]{ \n" +
-    "background-color: "+from+"; \n" +
-    "} \n";
-    $("#cssarea").val(text);
-    $("#modalWindow").modal("show");
+$('#color').colorpicker({
+      format: 'hex'
 });
-$("#focus").click(function () {
-    $("#cssarea").select();
-});
-function ascendingSort(a, b){ return a - b; }
-$('#color').keyup(function(e){
-	var grad = 10;
-	var temp = $(this).val();
-	if(temp.length == 7){
-	from = temp;
+function changeColor(color){
+    var grad = 10;
+    ascendingSort = function(a, b){ return a - b; };
+	if(color.length == 7){
+	from = color;
 	var hexR=(parseInt(from.substring(1,3),16));
 	var hexG=(parseInt(from.substring(3,5),16));
 	var hexB=(parseInt(from.substring(5,7),16));
@@ -106,5 +85,37 @@ $('#color').keyup(function(e){
     $("#dl-btn").css("background-image","-webkit-linear-gradient(top,"+to+","+ from+")");
     $("#dl-btn").css("background-image","-o-linear-gradient(top,"+to+","+ from+")");
     $("#dl-btn").css("background-image","linear-gradient(top,"+to+","+ from+")");  
-    }  
+    } 
+};
+$('#color').keyup(function(e){
+    var color = $(this).val();
+    changeColor(color);
+});
+$('#color').colorpicker().on('changeColor', function(ev){  
+    var color = ev.color.toHex();
+    $(this).val(color);
+    changeColor(color);    
+});
+$("#dl-btn").click(function(){
+    var btnName = $("#btn-name").val();
+    var text = 
+    "."+ btnName + "{ \n" +
+    "color: #ffffff; \n" + 
+    "background-color: "+from+"; \n" +
+    "background-image: -moz-linear-gradient(top, "+to+","+ from + "); \n" +
+    "background-image: -ms-linear-gradient(top, "+to+","+ from + "); \n" +
+    "background-image: -webkit-gradient(linear, 0 0, 0 100%, from("+to+"), to("+from+")); \n" +
+    "background-image: -webkit-linear-gradient(top, "+to+","+ from + "); \n" +
+    "background-image: -o-linear-gradient(top, "+to+","+ from + "); \n" +
+    "background-image: linear-gradient(top, "+to+","+ from + "); \n" +
+    "filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='"+to+"', endColorstr='"+from+"', GradientType=0); \n" +
+    "} \n" +
+    ".btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled]{ \n" +
+    "background-color: "+from+"; \n" +
+    "} \n";
+    $("#cssarea").val(text);
+    $("#modalWindow").modal("show");
+});
+$("#focus").click(function () {
+    $("#cssarea").select();
 });
